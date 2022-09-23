@@ -3,7 +3,9 @@ package com.spring.market.persistance.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -17,6 +19,9 @@ public class Cliente {
   private String direccion;
   @Column(name = "correo_electronico")
   private String correoElectronico;
+
+  @OneToMany(mappedBy = "cliente")
+  private List<Compra> compras;
 
   public String getId() {
     return id;

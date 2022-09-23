@@ -3,9 +3,12 @@ package com.spring.market.persistance.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
@@ -25,6 +28,9 @@ public class Producto {
   @Column(name = "cantidad_stock")
   private Integer cantidadStock;
   private Boolean estado;
+  @ManyToOne
+  @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+  private Categoria categoria;
 
   public Integer getIdProducto() {
     return idProducto;

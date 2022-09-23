@@ -5,7 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "categorias")
@@ -17,6 +19,9 @@ public class Categoria {
   private Integer idCategoria;
   private String descripcion;
   private Boolean estado;
+
+  @OneToMany(mappedBy = "categoria") //Nombre de la variable con la que se relaciona en la clase Producto
+  private List<Producto> productos;
 
   public Integer getIdCategoria() {
     return idCategoria;

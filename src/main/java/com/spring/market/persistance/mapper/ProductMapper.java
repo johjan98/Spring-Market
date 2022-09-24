@@ -1,0 +1,30 @@
+package com.spring.market.persistance.mapper;
+
+import com.spring.market.domain.Product;
+import com.spring.market.persistance.entity.Producto;
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
+
+import java.util.List;
+
+@Mapper(componentModel = "spring", uses = {CategoryMapper.class}) //uses: se indica el mapper que debe utilizar para categoria y category
+public interface ProductMapper {
+
+  @Mappings({
+          @Mapping(source = "idProducto", target = "productId"),
+          @Mapping(source = "nombre", target = "name"),
+          @Mapping(source = "idCategoria", target = "categryId"),
+          @Mapping(source = "precioVenta", target = "price"),
+          @Mapping(source = "cantidadStock", target = "stock"),
+          @Mapping(source = "estado", target = "active"),
+          @Mapping(source = "categoria", target = "category")
+  })
+  Product toProduct(Producto producto);
+  List<Product> toProducts(List<Producto> productos); //No es necesaria ninguna anotacion, mapstruct aplicará la misma configuracion de toProduct
+
+  @InheritInverseConfiguration
+  @Mapping(target = "codigoBarras", ignore = true)
+  Producto toProducto(Product product);
+}

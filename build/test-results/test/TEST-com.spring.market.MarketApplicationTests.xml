@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spring.market.MarketApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-27T00:37:38" hostname="JOHJANP" time="0.566">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.spring.market.MarketApplicationTests" time="0.566"/>
+  <system-out><![CDATA[19:37:30.838 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.spring.market.MarketApplicationTests]: MarketApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:37:30.993 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.spring.market.MarketApplication for test class com.spring.market.MarketApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-06-26T19:37:31.686-05:00  INFO 12372 --- [market] [    Test worker] c.spring.market.MarketApplicationTests   : Starting MarketApplicationTests using Java 21.0.3 with PID 12372 (started by johja in C:\Users\johja\OneDrive\Documentos\market)
+2024-06-26T19:37:31.686-05:00  INFO 12372 --- [market] [    Test worker] c.spring.market.MarketApplicationTests   : The following 1 profile is active: "dev"
+2024-06-26T19:37:32.888-05:00  INFO 12372 --- [market] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-26T19:37:32.995-05:00  INFO 12372 --- [market] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2024-06-26T19:37:33.793-05:00  INFO 12372 --- [market] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-26T19:37:34.094-05:00  INFO 12372 --- [market] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70b48eb3
+2024-06-26T19:37:34.097-05:00  INFO 12372 --- [market] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-26T19:37:34.184-05:00  INFO 12372 --- [market] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-26T19:37:34.364-05:00  INFO 12372 --- [market] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-26T19:37:34.516-05:00  INFO 12372 --- [market] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-26T19:37:35.143-05:00  INFO 12372 --- [market] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-26T19:37:35.726-05:00  WARN 12372 --- [market] [    Test worker] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.spring.market.persistence.entity.ComprasProductoPK
+2024-06-26T19:37:35.726-05:00  WARN 12372 --- [market] [    Test worker] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.spring.market.persistence.entity.ComprasProductoPK
+2024-06-26T19:37:36.543-05:00  INFO 12372 --- [market] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-26T19:37:36.559-05:00  INFO 12372 --- [market] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-26T19:37:37.668-05:00  WARN 12372 --- [market] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-26T19:37:38.898-05:00  INFO 12372 --- [market] [    Test worker] c.spring.market.MarketApplicationTests   : Started MarketApplicationTests in 7.613 seconds (process running for 9.53)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\johja\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.17\e3c251a39dc90badaf71c83427ba46840f219d8d\byte-buddy-agent-1.14.17.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
